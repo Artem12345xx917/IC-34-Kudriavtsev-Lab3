@@ -1,131 +1,203 @@
-/* Теговий селектор для body */
-body {
-    font-family: Arial, sans-serif;
-    background-image: url('back.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: #E5E5E5;
-    margin: 0;
+body{
+    font-family:system-ui;
 }
 
-/* Класовий селектор для header */
-.header {
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 130px;
+header{
+    background-color: #4A505E; 
+    height: 130px;  
+    display: flex; 
+    flex-wrap:
+    align-items center;
+}
+
+header img{
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+header button{
+    font-family:system-ui;
+}
+
+.hdr{
     display: flex;
-    align-items: center;
-    padding-left: 20px;
+    border: 2px solid white;
 }
 
-/* Класовий селектор для кнопок в header */
-.header .button {
-    background-color: #4A90E2;
-    color: white;
+.hdr button{
+    font-size:14px;
+    float: left;
+    background-color: #4A505E; 
     border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-/* Идентификатор для формы отправки */
-#booking-form-submit {
-    background-color: #4A90E2;
     color: white;
-    cursor: pointer;
-}
-
-/* Псевдоклассы для кнопок при наведении */
-.header .button:hover {
-    background-color: #357ABD;
-}
-
-/* Псевдокласс для поля ввода, когда оно в фокусе */
-input:focus {
-    outline: none;
-    border-color: #4A90E2;
-}
-
-/* Атрибутный селектор для полей формы с обязательным вводом */
-input[required] {
-    background-color: #555;
-}
-
-/* Атрибутный селектор для поля ввода email, когда оно в фокусе */
-input[type="email"]:focus {
-    background-color: #333;
-    border: 1px solid #4A90E2;
-}
-
-/* Теговий селектор для h1 */
-h1 {
-    font-size: 24px;
-    color: #4A90E2;
-}
-
-/* Класовий селектор для списков */
-.destination-list {
-    list-style-type: circle;
-}
-
-/* Теговий селектор для таблицы */
-table {
-    width: 50%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-/* Класовий селектор для ячеек таблицы */
-.destination-table th, .destination-table td {
-    padding: 10px;
-    text-align: left;
-}
-
-/* Класовий селектор для заголовков таблицы */
-.destination-table th {
-    background-color: #4A90E2;
-    color: white;
-}
-
-/* Атрибутный селектор для полей ввода телефона, когда введен правильный номер */
-input[type="tel"]:valid {
-    background-color: #7CFC00;
-}
-
-/* Атрибутный селектор для полей ввода телефона, когда введен неправильный номер */
-input[type="tel"]:invalid {
-    background-color: #FF6347;
-}
-
-/* Класовий селектор для шагов бронирования */
-.booking-steps {
-    margin-top: 20px;
-}
-
-/* Идентификатор для текста подтверждения */
-#confirmation-text {
-    font-size: 18px;
-    color: #FFD700;
-}
-
-/* Теговий селектор для footer */
-footer {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
+    padding: 15px 32px;
     text-align: center;
-    margin-top: 20px;
-}
-
-/* Комбинированный селектор для input и submit */
-form input[type="submit"] {
-    margin-top: 20px;
-    background-color: #4A90E2;
+    text-decoration: none;
     cursor: pointer;
+    transition-duration: 0.4s;
+}
+.hdr button:hover{
+    background-color: white;
+    color: #4A505E;
 }
 
-/* Псевдокласс для кнопки при наведении */
-form input[type="submit"]:hover {
-    background-color: #357ABD;
+.red{
+    display: flex;
+    }
+
+button.red{
+    font-size:large;
+    border: 2px solid #e81a4b;
+    background-color: #4A505E; 
+    color: white;
+    padding: 15px 32px;
+    margin: 6px;
+    margin-right: 60px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    overflow: hidden;
 }
+
+.red:hover{
+    background-color: #e81a4b;
+    color: white;
+}
+
+
+
+.fa-solid{
+    margin-left: 40%;
+    color: white;
+}
+
+.fa-solid:hover {
+    animation: fa-bounce 1s infinite;
+}
+
+h1{
+    text-align: center;
+    color:white;
+    background:#e81a4b;
+}
+
+.categories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card{
+    margin: 2%;
+    border: 3px solid black;
+    border-radius: 10px;
+    transition-duration: 0.3s;
+}
+
+.card:hover{
+    border: 3px solid #e81a4b; 
+}
+
+.picture{
+   padding: 15px; 
+}
+
+.productname{
+    text-align: center;
+    border-top: 2px solid rgb(147, 147, 147);
+}
+
+.characteristics{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.prdct{
+    width:50%;
+}
+
+table{
+    border-collapse: collapse;
+    text-align:center;
+}
+
+th, td:first-child{
+    background: #e81a4b;
+    color: white;
+    padding: 10px 20px;
+}
+
+th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+}
+
+td {
+    background: #f2f2f2;
+}
+
+.tutorial{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.rectangle {
+    counter-reset: li; 
+    list-style: none; 
+    padding: 0;
+}
+.rectangle a {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em .8em;
+    margin: .5em 0 .5em 2.5em;
+    background: #f2f2f2;
+}
+   
+.rectangle a:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -2.5em;
+    top: 50%;
+    margin-top: -1em;
+    background: #e81a4b;
+    color:white;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.register{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+ .sbmt {
+    font-size:medium;
+    border: 2px solid #e81a4b;
+    background-color: white; 
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+ }
+
+ .sbmt:hover{
+    background-color: #e81a4b;
+    color: white;
+ }
+
+ .impt{
+    height: 38px;
+    padding: 0 10px;
+    border: 1px solid rgba(237, 82, 118, 0.578);
+    font-size: 20px;
+    outline: none;
+ }
