@@ -1,102 +1,294 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Навчальний центр</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: rgb(255, 255, 255);
+      padding: 25px;
+      text-align: center;
+      font-weight: bold;
+    }
+    nav {
+      background-color: rgb(255, 255, 255);
+      padding: 25px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15іpx;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+    .container {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+      background-color: lightgray;
+    }
+    .column {
+      width: 30%;
+      padding: 60px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .column:nth-child(1) {
+      background-color: lightblue;
+    }
+    .column:nth-child(2) {
+      background-color: orange;
+    }
+    .column:nth-child(3) {
+      background-color: rgb(243, 40, 40);
+    }
+    .content {
+      padding: 20px;
+      background-color: white;
+      text-align: center;
+    }
+    footer {
+      background-color: rgb(255, 255, 255);
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    footer a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+</head>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Навчальний центр навчання - IT</title>
+  <style>
+    body {
+      font-size: 18px; /* Общий размер текста */
+      line-height: 1.6; /* Удобное расстояние между строками */
+    }
+    header {
+  display: flex; /* Размещаем элементы в строку */
+  justify-content: space-between; /* Применяем пространство между элементами */
+  align-items: center; /* Выравниваем элементы по вертикали */
+}
+
+.header-left {
+    color: #6bbbe0;
+  /* Стили для левой части */
+}
+
+.header-right {
+    font-size: 18px;  /* Уменьшаем размер шрифта */
+    color: #b150c9;
+  /* Стили для правой части */
+}
+nav {
+  font-size: 20px; /* Размер текста в навигации */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+nav a {
+  display: inline-block;  /* Чтобы элементы располагались в строку */
+  padding: 20px 35px;  /* Увеличиваем отступы внутри кнопки */
+  margin: 20px;  /* Отступы между кнопками */
+  background-color: rgb(67, 182, 211);  /* Цвет фона кнопки */
+  color: rgb(45, 156, 64);  /* Цвет текста */
+  text-decoration: none;  /* Убирает подчеркивание */
+  border-radius: 5px;  /* Скругленные углы */
+  font-size: 30px;  /* Увеличиваем размер шрифта */
+  text-align: center;  /* Центрирует текст внутри кнопки */
+  transition: background-color 0.3s ease;  /* Плавное изменение фона при наведении */
+}
+    .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin: 20px;
+    }
+
+    .container ul li a {
+  text-decoration: none;  /* Убирает подчеркивание */
+  color: white;  /* Белый цвет для текста ссылок */
+  cursor: pointer;  /* Курсор указывает на ссылку */
+  font-size: 20px;  /* Устанавливает размер шрифта */
+}
+
+    .container h3 {
+      font-size: 22px; /* Заголовки колонок */
+    }
+    .container ul li, .container p {
+      font-size: 18px; /* Общий текст в колонках */
+    }
     
-    <link rel="stylesheet" href="style3.css">
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 18px; /* Увеличенный текст для поля поиска */
+    }
+    .content {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .content h2 {
+      font-size: 26px; /* Главный заголовок контента */
+      margin-bottom: 20px;
+    }
+    .content p {
+      font-size: 20px; /* Текст под заголовком */
+    }
+    footer {
+      font-size: 18px; /* Текст футера */
+      margin: 20px 0;
+    }
+    footer a {
+  display: inline-block;  /* Чтобы элементы располагались в строку */
+  padding: 10px 20px;  /* Отступы внутри кнопки */
+  margin: 5px;  /* Отступы между кнопками */
+  background-color: rgb(226, 226, 226);  /* Цвет фона кнопки */
+  color: rgb(45, 156, 64);  /* Белый цвет текста */
+  text-decoration: none;  /* Убирает подчеркивание */
+  border-radius: 5px;  /* Скругленные углы */
+  font-size: 16px;  /* Размер шрифта */
+  text-align: center;  /* Центрирует текст внутри кнопки */
+  transition: background-color 0.3s ease;  /* Плавное изменение фона при наведении */
+}
+  </style>
+</head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Навчальний центр навчання - IT</title>
+  <!-- Подключение Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    header {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin: 20px 0;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #ffffff;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      display: flex;
+      gap: 20px;
+      margin: 20px;
+    }
+    .column {
+      flex: 1;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .content img {
+      display: block;
+      margin: 20px auto;
+    }
+    footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+    footer a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #35a849;
+      font-size: 24px;
+    }
+    footer a:hover {
+      color: #ffffff;
+    }
+  </style>
 </head>
 <body>
-    <header><h2><b>Популярні напрямки</b><h1>КУРСІВ ПРОГРАМУВАННЯ</h1> </h2></header>
-    <main>
-        <div class="courses">
-            <div class="card">
-                
-                <div class="title">
-                    <h1>Javascript</h1>
-                    <p>Комплексний курс</p>
-                </div> 
-
-                <div class="info">
-                    <p>Стартовий рівень: початківець</p>
-                    <p>Тривалість: 5-11 місяців</p>
-                    <p>Ціна: від 14500 грн</p>
-                </div>
-
-                <p class="left">Залишилось 3 місця</p>
-                <div class="detail">
-                    <p>Детальніше</p>
-                </div> 
-            </div>
-
-            <div class="card">
-                
-                <div class="title">
-                    <h1>Java</h1>
-                    <p>Комплексний курс</p>
-                </div>
-
-                <div class="info">
-                    <p>Стартовий рівень: початківець</p>
-                    <p>Тривалість: 6-11 місяців</p>
-                    <p>Ціна: від 14500 грн</p>
-                </div>
-
-                <p class="left">Залишилось 6 місць</p>
-                
-                <div class="detail">
-                    <p>Детальніше</p>
-                </div>
-            </div>
-
-            <div class="card">
-                
-                <div class="title">
-                    <h1>Python</h1>
-                    <p>Комплексний курс</p>
-                </div>
-
-                <div class="info">
-                    <p>Стартовий рівень: початківець</p>
-                    <p>Тривалість: 6-11 місяців</p>
-                    <p>Ціна: від 14500 грн</p>
-                </div>
-
-                <p class="left">Залишилось 4 місця</p>
-                
-                <div class="detail">
-                    <p>Детальніше</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="photos">
-            <img src="programmers/prog1.png" alt="programmer" width="300" height="200">
-            <img src="programmers/prog2.png" alt="programmer" width="300" height="200">
-            <img src="programmers/prog3.png" alt="programmer" width="300" height="200">
-            <img src="programmers/prog4.png" alt="programmer" width="300" height="200">
-        </div>
-
-        <div class="description">
-            <div class="photo">
-                <img src="programmers/womanwithbook.png" alt="programmer" width="389" height="598">
-            </div>
-            <div class="text">
-                <h1>ВІД НОВАЧКА ДО PRO-РОЗРОБНИКА</h1>
-                <p>Работа в IT - це високі зарплати, можливість віддаленої співпраці із закордонними компаніями і свобода вибору. Але є і мінуси. Низький старт - головний з них. Фахівцб без досвіду складно отримати робочий стаж, а зарплата коливається на рівні мінімальної.</p>
-                <p>На курсах з інкубатором наші студенти отримують додаткових 5 місяців досвіду, який так сильно вимагають роботодавці.</p>
-                <p>З таким резюме ви станете бажаним кандидатом для будь-якої компанії!</p>
-            </div>
-        </div>
-
-    <footer>
-        <h1>НАВЧАЙСЯ ЗАРАЗ, СПЛАЧУЙ</h1>
-        <h1>ПОТІМ</h1>
-    </footer>
-    </main>
+    <header>
+        <div class="header-left">Навчальний центр навчання - IT</div>
+        <div class="header-right">Ми працюємо Пн-Пт з 10:00 до 19:00 Сб-Нд: Вихідний.</div>
+      </header>
+  <nav>
+    <a href="#">Головна</a>
+    <a href="#">Акції</a>
+    <a href="#">Курси</a>
+    <a href="#">Про центр</a>
+    <a href="#">Контакти</a>
+    <a href="#">Ціни</a>
+    <a href="#">Блог</a>
+  </nav>
+  <div class="container">
+    <div class="column">
+      <h3>Список курсів</h3>
+      <ul>
+        <li><a href="#">Курси інженерної графіки</a></li>
+        <li><a href="#">Курси комп'ютерного моделювання</a></li>
+        <li><a href="#">Курси програмування</a></li>
+        <li><a href="#">Курси бухгалтерів</a></li>
+        <li><a href="#">Курси системного адміністрування</a></li>
+        <li><a href="#">Комп'ютер для початківців</a></li>
+        <li><a href="#">Курси створення сайтів</a></li>
+        <li><a href="#">Просування веб-сайтів (SEO)</a></li>
+        <li><a href="#">Курси менеджерів</a></li>
+        <li><a href="#">Курси графіки</a></li>
+        <li><a href="#">Створення сайт</a></li>
+        <li><a href="#">Курси дизайну</a></li>
+      </ul>
+    </div>
+    <div class="column">
+        <h3>Нова форма навчання</h3>
+        <p>Вибір будь-якого часу курсу.</p>
+        <p>Проведення занять безпосередньо у слухача на дому або в офісі.</p>
+      
+        <p>Навчання за індивідуальною програмою.</p>
+        <p>Ви вчите тільки те, що вам потрібно. Програма підбирається під вас!</p>
+      
+        <p>Безкоштовна установка ПЗ на ваш ноутбук або комп'ютер.</p>
+        <p>Викладач встановить, а також налаштує потрібну програму для виконання домашнього завдання.</p>
+      </div>
+    <div class="column">
+      <h3>Знайти курс</h3>
+      <p>Скористайтеся пошуком, щоб знайти потрібий вам курс або подивіться всі курси.</p>
+      <input type="text" placeholder="Пошук курсів">
+    </div>
+  </div>
+  <h2 style="text-align: center;">Курси web-програмування в Києві.</h2>
+  <div class="content" style="display: flex; align-items: flex-start; gap: 20px; margin: 20px 0;">
+    <img src="1.png" alt="Web Programming" style="width: 800px; height: 500px; object-fit: cover; border-radius: 10px;">
+    <div style="flex: 1; text-align: justify; line-height: 1.6;">
+      <p style="font-size: 28px;">Ми шукаємо всіх тих, кому цікавий світ програмування! Хочете займатися розробкою програмного забезпечення і побудовою web-сайтів? А, може, Ви вже робите все це і жадаєте додаткових знань або вирішили підвищити свою кваліфікацію? Не біда, якщо ніколи і не пробували себе в подібному - команда IТ готова надавати свої послуги людям будь-якого рівня знань. Якщо наші клієнти новачки, то ми почнемо заняття з основ, а якщо ж просунуті користувачі, то вони починатимуть навчання з, більш, складного матеріалу, при цьому, не зупиняючись на тому, що їм давно відомо. Теми для проведення занять дозволено вибирати на свій розсуд.</p>
+    </div>
+  </div>
+  <footer>
+    <a href="#">Ми на мапі</a>
+    <a href="#">Зв'язок з нами</a>
+    <a href="#">Корисні посилання</a>
+    <a href="#">Популярне на блозі</a>
+  </footer>
 </body>
+</html>
 </html>
