@@ -3,29 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style2.1.css">
+    <title>Flexible Table Layout</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center; /* Центрирует контейнер по горизонтали */
+            align-items: center;     /* Центрирует контейнер по вертикали */
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        table {
+            width: 100%;  /* Таблица растягивается на всю ширину контейнера */
+            height: 100%; /* Таблица растягивается на всю высоту контейнера */
+            border-collapse: collapse;
+            table-layout: auto;  /* Автоматическое распределение ширины ячеек */
+        }
+
+        td {
+            text-align: center;
+            vertical-align: middle; /* Центрирование контента по вертикали */
+            border: 1px solid #000;
+        }
+
+        .top, .bottom {
+            background-color: blue;
+            color: white;
+            line-height: 50px;
+        }
+
+        .left {
+            background-color: yellow;
+            color: black;
+            width: 20%;  /* Задаем ширину в процентах для гибкости */
+        }
+
+        .center {
+            background-color: white;
+            color: black;
+            line-height: 396px;
+        }
+
+        .middle {
+            height: 100%; /* Это позволяет центральной ячейке заполнять оставшуюся высоту */
+        }
+    </style>
 </head>
 <body>
-    <table cellpadding="1" width="100%" cellspacing="1">
-        <tr class="header">
-            <td class="headertd" colspan="3">1</td>
-        </tr>
-        
-        <tr class="main">
-            <td class="second" rowspan="4">2</td>
-            <tr>
-                <td class="sixth" colspan="2"s>6</td>
-            </tr>
-            <td class="third">3</td>
-            <td class="fourth" rowspan="4">4</td>
-            <tr>
-                <td class="seventh">7</td>
-            </tr>
-        </tr>
-        
-        <tr  class="footer">
-            <td colspan="3">5</td>
+    <table>
+        <tr>
+            <td class="left">2</td> <!-- Желтый блок с гибкой шириной -->
+            <td class="middle">
+                <table>
+                    <tr>
+                        <td class="top">1</td> <!-- Верхний блок -->
+                    </tr>
+                    <tr>
+                        <td class="center">4</td> <!-- Центральный блок -->
+                    </tr>
+                    <tr>
+                        <td class="bottom">3</td> <!-- Нижний блок -->
+                    </tr>
+                </table>
+            </td>
         </tr>
     </table>
 </body>

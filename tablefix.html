@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fixed Layout with Flexbox</title>
+    <title>Fixed Layout with Table</title>
     <style>
         body {
             margin: 0;
@@ -14,72 +14,62 @@
             background-color: #f0f0f0;
         }
 
-        .container {
-            display: flex;
-            width: 300px;
+        table {
+            width: 400px;  /* Увеличиваем ширину всей таблицы */
             height: 500px;
-            position: relative;
+            border-collapse: collapse;
+            table-layout: fixed;  /* Фиксированное распределение ширины ячеек */
         }
 
-        .top {
-            flex: 0 0 50px;
-            background-color: blue;
-            border: 1px solid #000;
+        td {
             text-align: center;
+            vertical-align: middle; /* Центрирование контента по вертикали */
+        }
+
+        .top, .bottom {
+            border: 1px solid #000;
+            background-color: blue;
             color: white;
             line-height: 50px;
-            width: 100%; /* Растягивается по ширине контейнера */
-        }
-
-        .middle {
-            display: flex;
-            flex: 1; /* Занимает всю оставшуюся высоту */
-            width: 250px;
         }
 
         .left {
-            width: 50px;  /* Фиксированная ширина */
-            background-color: yellow;
             border: 1px solid #000;
+            background-color: yellow;
             color: black;
-            display: flex; /* Включаем Flexbox */
-            justify-content: center; /* Центрируем по горизонтали */
-            align-items: center; /* Центрируем по вертикали */
-            height: 100%; /* Растягивается по высоте родительского контейнера */
+            width: 50px;  /* Ширина желтого блока */
         }
 
         .center {
-            flex: 1; /* Заполняет оставшееся пространство */
+            border: 1px solid #000;
             background-color: white;
             line-height: 396px;
-            border: 1px solid #000;
             color: black;
-            display: flex; /* Включаем Flexbox */
-            justify-content: center; /* Центрируем по горизонтали */
-            align-items: center; /* Центрируем по вертикали */
         }
 
-        .bottom {
-            flex: 0 0 50px;
-            border: 1px solid #000;
-            background-color: blue;
-            text-align: center;
-            color: white;
-            line-height: 50px;
-            width: 100%; /* Растягивается по ширине контейнера */
+        .middle {
+            height: 100%;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="left">2</div> <!-- Желтый блок, растягивающийся по высоте -->
-        <div class="container-vertical">
-            <div class="top">1</div>
-            <div class="middle">
-                <div class="center">4</div>
-            </div>
-            <div class="bottom">3</div>
-        </div>
-    </div>
+    <table>
+        <tr>
+            <td class="left">2</td> <!-- Желтый блок с шириной 120px -->
+            <td class="middle">
+                <table>
+                    <tr>
+                        <td class="top">1</td> <!-- Верхний блок -->
+                    </tr>
+                    <tr>
+                        <td class="center">4</td> <!-- Центральный блок -->
+                    </tr>
+                    <tr>
+                        <td class="bottom">3</td> <!-- Нижний блок -->
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
