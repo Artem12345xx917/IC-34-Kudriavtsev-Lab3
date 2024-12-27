@@ -16,16 +16,15 @@
 
         .container {
             display: flex;
-            flex-direction: column; /* Вертикальное выравнивание */
             width: 300px;
             height: 500px;
-            border: 1px solid #000;
             position: relative;
         }
 
         .top {
             flex: 0 0 50px;
             background-color: blue;
+            border: 1px solid #000;
             text-align: center;
             color: white;
             line-height: 50px;
@@ -35,12 +34,13 @@
         .middle {
             display: flex;
             flex: 1; /* Занимает всю оставшуюся высоту */
-            width: 100%; /* Растягивается по ширине контейнера */
+            width: 250px;
         }
 
         .left {
             width: 50px;  /* Фиксированная ширина */
             background-color: yellow;
+            border: 1px solid #000;
             color: black;
             display: flex; /* Включаем Flexbox */
             justify-content: center; /* Центрируем по горизонтали */
@@ -51,6 +51,8 @@
         .center {
             flex: 1; /* Заполняет оставшееся пространство */
             background-color: white;
+            line-height: 396px;
+            border: 1px solid #000;
             color: black;
             display: flex; /* Включаем Flexbox */
             justify-content: center; /* Центрируем по горизонтали */
@@ -59,6 +61,7 @@
 
         .bottom {
             flex: 0 0 50px;
+            border: 1px solid #000;
             background-color: blue;
             text-align: center;
             color: white;
@@ -69,12 +72,14 @@
 </head>
 <body>
     <div class="container">
-        <div class="top">1</div>
-        <div class="middle">
-            <div class="left">2</div>
-            <div class="center">4</div>
+        <div class="left">2</div> <!-- Желтый блок, растягивающийся по высоте -->
+        <div class="container-vertical">
+            <div class="top">1</div>
+            <div class="middle">
+                <div class="center">4</div>
+            </div>
+            <div class="bottom">3</div>
         </div>
-        <div class="bottom">3</div>
     </div>
 </body>
 </html>
