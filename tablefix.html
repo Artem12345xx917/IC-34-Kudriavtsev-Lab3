@@ -3,30 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style2.1.css">
+    <title>Fixed Layout with Flexbox</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center; /* Центрирует контейнер по горизонтали */
+            align-items: center;     /* Центрирует контейнер по вертикали */
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column; /* Вертикальное выравнивание */
+            width: 300px;
+            height: 500px;
+            border: 1px solid #000;
+            position: relative;
+        }
+
+        .top {
+            flex: 0 0 50px;
+            background-color: blue;
+            text-align: center;
+            color: white;
+            line-height: 50px;
+            width: 100%; /* Растягивается по ширине контейнера */
+        }
+
+        .middle {
+            display: flex;
+            flex: 1; /* Занимает всю оставшуюся высоту */
+            width: 100%; /* Растягивается по ширине контейнера */
+        }
+
+        .left {
+            width: 50px;  /* Фиксированная ширина */
+            background-color: yellow;
+            color: black;
+            display: flex; /* Включаем Flexbox */
+            justify-content: center; /* Центрируем по горизонтали */
+            align-items: center; /* Центрируем по вертикали */
+            height: 100%; /* Растягивается по высоте родительского контейнера */
+        }
+
+        .center {
+            flex: 1; /* Заполняет оставшееся пространство */
+            background-color: white;
+            color: black;
+            display: flex; /* Включаем Flexbox */
+            justify-content: center; /* Центрируем по горизонтали */
+            align-items: center; /* Центрируем по вертикали */
+        }
+
+        .bottom {
+            flex: 0 0 50px;
+            background-color: blue;
+            text-align: center;
+            color: white;
+            line-height: 50px;
+            width: 100%; /* Растягивается по ширине контейнера */
+        }
+    </style>
 </head>
 <body>
-    <table cellpadding="1" width="1535" cellspacing="1">
-        <tr class="header">
-            <td class="headertd" colspan="3">1</td>
-        </tr>
-        
-        <tr class="main">
-            <td class="second" rowspan="4">2</td>
-            <tr>
-                <td class="sixth" colspan="2"s>6</td>
-            </tr>
-            <td class="third">3</td>
-            <td class="fourth" rowspan="4">4</td>
-            <tr>
-                <td class="seventh">7</td>
-            </tr>
-        </tr>
-        
-        <tr  class="footer">
-            <td colspan="3">5</td>
-        </tr>
-    </table>
+    <div class="container">
+        <div class="top">1</div>
+        <div class="middle">
+            <div class="left">2</div>
+            <div class="center">4</div>
+        </div>
+        <div class="bottom">3</div>
+    </div>
 </body>
 </html>
