@@ -3,21 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style2.2(2).css">
+    <title>Гумова блокова верстка</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%; /* Гумова ширина */
+            height: 100vh; /* Гумова висота */
+            display: grid;
+            grid-template-rows: 1fr 6fr 1fr;
+            grid-template-columns: 2fr 3fr 2fr;
+        }
+        .block1, .block2, .block3, .block4, .block5 {
+            display: flex;
+            justify-content: center; /* Горизонтальне центрування */
+            align-items: center; /* Вертикальне центрування */
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
+        .block1 { grid-column: 1 / span 3; background-color: blue; color: white; }
+        .block2 { background-color: yellow; }
+        .block3 { grid-column: 1 / span 3; background-color: blue; color: white; }
+        .block4 { background-color: white; }
+        .block5 { background-color: yellow; }
+    </style>
 </head>
 <body>
-    <header>1</header>
-
-    <div class="main">
-        <div class="second">2</div>
-        <div>
-            <div class="third">3</div>
-            <div class="sixth">6</div>
-        </div>
-        <div class="fourth">4</div>
+    <div class="container">
+        <div class="block1">1</div>
+        <div class="block5">5</div>
+        <div class="block4">4</div>
+        <div class="block2">2</div>
+        <div class="block3">3</div>
     </div>
-
-    <footer>5</footer>
 </body>
 </html>
