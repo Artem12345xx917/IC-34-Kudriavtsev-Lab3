@@ -5,38 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Гумова блокова верстка</title>
     <style>
+        /* Стилі для тіла сторінки */
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
+            margin: 0; /* Прибирає відступи по замовчуванню */
+            font-family: Arial, sans-serif; /* Встановлюємо шрифт */
         }
+
+        /* Контейнер з гумовою версткою */
         .container {
-            width: 100%; /* Гумова ширина */
-            height: 100vh; /* Гумова висота */
-            display: grid;
-            grid-template-rows: 1fr 6fr 1fr;
-            grid-template-columns: 2fr 3fr 2fr;
+            width: 100%; /* Ширина контейнера займає всю доступну ширину */
+            height: 100vh; /* Висота контейнера займає всю висоту вікна браузера */
+            display: grid; /* Використовуємо CSS Grid для розміщення елементів */
+            grid-template-rows: 1fr 6fr 1fr; /* 3 рядки: перший і останній по 1 частині, середній — 6 частин */
+            grid-template-columns: 2fr 3fr 2fr; /* 3 стовпці: перший і останній по 2 частини, середній — 3 частини */
         }
+
+        /* Стилі для блоків */
         .block1, .block2, .block3, .block4, .block5 {
-            display: flex;
+            display: flex; /* Використовуємо Flexbox для центрування вмісту */
             justify-content: center; /* Горизонтальне центрування */
             align-items: center; /* Вертикальне центрування */
-            font-size: 24px;
-            font-weight: bold;
-            color: black;
+            font-size: 24px; /* Розмір шрифта */
+            font-weight: bold; /* Текст жирним */
+            color: black; /* Колір тексту */
         }
-        .block1 { grid-column: 1 / span 3; background-color: blue; color: white; }
-        .block2 { background-color: yellow; }
-        .block3 { grid-column: 1 / span 3; background-color: blue; color: white; }
-        .block4 { background-color: white; }
-        .block5 { background-color: yellow; }
+
+        /* Стиль для блоку 1 */
+        .block1 { 
+            grid-column: 1 / span 3; /* Блок займає всі три стовпці */
+            background-color: blue; /* Синій фон */
+            color: white; /* Білий колір тексту */
+        }
+
+        /* Стиль для блоку 2 */
+        .block2 { 
+            background-color: yellow; /* Жовтий фон */
+        }
+
+        /* Стиль для блоку 3 */
+        .block3 { 
+            grid-column: 1 / span 3; /* Блок займає всі три стовпці */
+            background-color: blue; /* Синій фон */
+            color: white; /* Білий колір тексту */
+        }
+
+        /* Стиль для блоку 4 */
+        .block4 { 
+            background-color: white; /* Білий фон */
+        }
+
+        /* Стиль для блоку 5 */
+        .block5 { 
+            background-color: yellow; /* Жовтий фон */
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Блок 1 займає всю ширину (три стовпці) -->
         <div class="block1">1</div>
+        
+        <!-- Блок 5 з жовтим фоном -->
         <div class="block5">5</div>
+        
+        <!-- Блок 4 з білим фоном -->
         <div class="block4">4</div>
+        
+        <!-- Блок 2 з жовтим фоном -->
         <div class="block2">2</div>
+        
+        <!-- Блок 3 займає всю ширину (три стовпці) -->
         <div class="block3">3</div>
     </div>
 </body>

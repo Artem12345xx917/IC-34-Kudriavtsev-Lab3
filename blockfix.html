@@ -5,43 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фіксована блокова верстка</title>
     <style>
+        /* Основні стилі для тіла сторінки */
         body {
-            margin: 0;
-            display: flex;
-            justify-content: center; /* Центрирует контейнер по горизонтали */
-            align-items: center;     /* Центрирует контейнер по вертикали */
-            height: 100vh;
-            font-family: Arial, sans-serif;
+            margin: 0; /* Прибирає відступи по замовчуванню */
+            display: flex; /* Використовуємо Flexbox для центрування контейнера */
+            justify-content: center; /* Центрує контейнер по горизонталі */
+            align-items: center;     /* Центрує контейнер по вертикалі */
+            height: 100vh; /* Висота тіла сторінки = 100% висоти вікна */
+            font-family: Arial, sans-serif; /* Шрифт для тексту */
         }
+
+        /* Основний контейнер, який містить блоки */
         .container {
-            width: 500px; /* Фіксована ширина */
-            height: 700px; /* Фіксована висота */
-            margin: 0 auto; /* Центрування контейнера */
-            display: grid;
-            grid-template-rows: 1fr 6fr 1fr;
-            grid-template-columns: 2fr 3fr 2fr;
+            width: 500px; /* Фіксована ширина контейнера */
+            height: 700px; /* Фіксована висота контейнера */
+            margin: 0 auto; /* Центрує контейнер по горизонталі */
+            display: grid; /* Використовуємо CSS Grid для розміщення елементів */
+            grid-template-rows: 1fr 6fr 1fr; /* Описуємо 3 рядки: перший і останній займають 1 частину, середній — 6 частин */
+            grid-template-columns: 2fr 3fr 2fr; /* Описуємо 3 стовпці: перший і останній займають 2 частини, середній — 3 частини */
         }
+
+        /* Стилі для блоків */
         .block1, .block2, .block3, .block4, .block5 {
-            display: flex;
-            justify-content: center; /* Горизонтальне центрування */
-            align-items: center; /* Вертикальне центрування */
-            font-size: 24px;
-            font-weight: bold;
-            color: black;
+            display: flex; /* Використовуємо Flexbox для внутрішнього центрування елементів */
+            justify-content: center; /* Горизонтальне центрування вмісту */
+            align-items: center; /* Вертикальне центрування вмісту */
+            font-size: 24px; /* Розмір шрифта */
+            font-weight: bold; /* Текст жирним */
+            color: black; /* Колір тексту */
         }
-        .block1 { grid-column: 1 / span 3; background-color: blue; color: white; }
-        .block2 { background-color: yellow; }
-        .block3 { grid-column: 1 / span 3; background-color: blue; color: white; }
-        .block4 { background-color: white; }
-        .block5 { background-color: yellow; }
+
+        /* Стилі для кожного блоку */
+        .block1 { 
+            grid-column: 1 / span 3; /* Блок займає всі 3 стовпці */
+            background-color: blue; /* Синій фон */
+            color: white; /* Білий колір тексту */
+        }
+
+        .block2 { 
+            background-color: yellow; /* Жовтий фон */
+        }
+
+        .block3 { 
+            grid-column: 1 / span 3; /* Блок займає всі 3 стовпці */
+            background-color: blue; /* Синій фон */
+            color: white; /* Білий колір тексту */
+        }
+
+        .block4 { 
+            background-color: white; /* Білий фон */
+        }
+
+        .block5 { 
+            background-color: yellow; /* Жовтий фон */
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Перший блок займає всю ширину (три стовпці) -->
         <div class="block1">1</div>
+        
+        <!-- П'ятий блок з жовтим фоном -->
         <div class="block5">5</div>
+        
+        <!-- Четвертий блок з білим фоном -->
         <div class="block4">4</div>
+        
+        <!-- Другий блок з жовтим фоном -->
         <div class="block2">2</div>
+        
+        <!-- Третій блок займає всю ширину (три стовпці) -->
         <div class="block3">3</div>
     </div>
 </body>

@@ -5,67 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fixed Layout with Table</title>
     <style>
+        /* Стилі для тіла сторінки */
         body {
-            margin: 0;
-            display: flex;
-            justify-content: center; /* Центрирует контейнер по горизонтали */
-            align-items: center;     /* Центрирует контейнер по вертикали */
-            height: 100vh;
-            background-color: #f0f0f0;
+            margin: 0; /* Прибирає відступи по замовчуванню */
+            display: flex; /* Використовуємо Flexbox для центрування контейнера */
+            justify-content: center; /* Центрує контейнер по горизонталі */
+            align-items: center; /* Центрує контейнер по вертикалі */
+            height: 100vh; /* Висота сторінки — 100% від висоти вікна браузера */
+            background-color: #f0f0f0; /* Світло-сірий фон для сторінки */
         }
 
+        /* Стилі для таблиці */
         table {
-            width: 400px;  /* Увеличиваем ширину всей таблицы */
-            height: 500px;
-            border-collapse: collapse;
-            table-layout: fixed;  /* Фиксированное распределение ширины ячеек */
+            width: 400px;  /* Ширина таблиці */
+            height: 500px; /* Висота таблиці */
+            border-collapse: collapse; /* З'єднання кордонів клітинок */
+            table-layout: fixed;  /* Фіксоване розподілення ширини клітинок */
         }
 
+        /* Стилі для клітинок таблиці */
         td {
-            text-align: center;
-            vertical-align: middle; /* Центрирование контента по вертикали */
+            text-align: center; /* Центрування тексту по горизонталі */
+            vertical-align: middle; /* Центрування контенту по вертикалі */
         }
 
+        /* Стилі для верхнього і нижнього рядів таблиці */
         .top, .bottom {
-            border: 1px solid #000;
-            background-color: blue;
-            color: white;
-            line-height: 50px;
+            border: 1px solid #000; /* Чорний контур */
+            background-color: blue; /* Синій фон */
+            color: white; /* Білий колір тексту */
+            line-height: 50px; /* Висота рядка */
         }
 
+        /* Стилі для лівого стовпця */
         .left {
-            border: 1px solid #000;
-            background-color: yellow;
-            color: black;
-            width: 50px;  /* Ширина желтого блока */
+            border: 1px solid #000; /* Чорний контур */
+            background-color: yellow; /* Жовтий фон */
+            color: black; /* Чорний колір тексту */
+            width: 50px;  /* Фіксована ширина жовтого блоку */
         }
 
+        /* Стилі для центрального стовпця */
         .center {
-            border: 1px solid #000;
-            background-color: white;
-            line-height: 396px;
-            color: black;
+            border: 1px solid #000; /* Чорний контур */
+            background-color: white; /* Білий фон */
+            line-height: 396px; /* Висота центральної клітинки */
+            color: black; /* Чорний колір тексту */
         }
 
+        /* Стилі для середнього контейнера */
         .middle {
-            height: 100%;
+            height: 100%; /* Висота 100% від висоти батьківської таблиці */
         }
     </style>
 </head>
 <body>
+    <!-- Основна таблиця, що містить два стовпці -->
     <table>
         <tr>
-            <td class="left">2</td> <!-- Желтый блок с шириной 120px -->
+            <!-- Лівий стовпець з жовтим блоком -->
+            <td class="left">2</td> <!-- Жовтий блок з текстом "2" -->
+            
+            <!-- Середній стовпець, що містить вкладену таблицю -->
             <td class="middle">
+                <!-- Вкладена таблиця, що містить три ряди -->
                 <table>
                     <tr>
-                        <td class="top">1</td> <!-- Верхний блок -->
+                        <!-- Верхній блок з синім фоном -->
+                        <td class="top">1</td> <!-- Верхній блок -->
                     </tr>
                     <tr>
-                        <td class="center">4</td> <!-- Центральный блок -->
+                        <!-- Центральний блок з білим фоном -->
+                        <td class="center">4</td> <!-- Центральний блок -->
                     </tr>
                     <tr>
-                        <td class="bottom">3</td> <!-- Нижний блок -->
+                        <!-- Нижній блок з синім фоном -->
+                        <td class="bottom">3</td> <!-- Нижній блок -->
                     </tr>
                 </table>
             </td>
